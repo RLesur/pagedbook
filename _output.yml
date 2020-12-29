@@ -15,7 +15,11 @@ bookdown::pdf_book:
   keep_tex: yes
 bookdown::epub_book: default
 pagedown::html_paged:
+  self_contained: false
+  # use some custom CSS files:
   css:
     - html-paged-fonts.css
     - html-paged-page.css
     - html-paged.css
+   # because we use local CSS files:
+  copy_resources: true
