@@ -21,5 +21,8 @@ pagedown::html_paged:
     - html-paged-fonts.css
     - html-paged-page.css
     - html-paged.css
-   # because we use local CSS files:
+  # because we use local CSS files:
   copy_resources: true
+  # you can pass some html dependencies
+  extra_dependencies:
+    - !expr rmarkdown::html_dependency_font_awesome()
